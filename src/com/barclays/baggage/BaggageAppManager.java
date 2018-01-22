@@ -36,7 +36,7 @@ public class BaggageAppManager {
 
         ConveyorSystemInputReader conveyorInputReader = new ConveyorSystemInputReader();
         try {
-        	conveyorInputReader.readConveyorSystem();
+        	conveyorInputReader.readSection();
             conveyorGraph = conveyorInputReader.getConveyorGraph();
             //System.out.println(conveyorGraph);
         } catch (Exception ex) {
@@ -45,7 +45,7 @@ public class BaggageAppManager {
 
         FlightDepartureInputReader flightDepartureInputReader = new FlightDepartureInputReader();
         try {
-        	flightDepartureInputReader.readFlightSection();
+        	flightDepartureInputReader.readSection();
             flightIdToDepartureMap = flightDepartureInputReader.getFlightIdToDepartureMap();
             //System.out.println(flightIdToDepartureMap);
         } catch (Exception ex) {
@@ -54,7 +54,7 @@ public class BaggageAppManager {
 
         BaggageInputReader bagInputReader = new BaggageInputReader();
         try {
-        	bagInputReader.readBagSection();
+        	bagInputReader.readSection();
             bagIdToBagMap = bagInputReader.getBagIdToBagMap();
             //System.out.println(bagIdToBagMap);
         } catch (Exception ex) {

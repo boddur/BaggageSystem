@@ -14,11 +14,11 @@ import com.barclays.baggage.model.FlightDeparture;
  * Created on Jan 21, 2018tim6:48:52 PM by @author rboddu
  *
  */
-public class FlightDepartureInputReader{
+public class FlightDepartureInputReader implements InputReader{
 
 	Map<String, FlightDeparture> flightIdToDepartureMap;
 
-	public void readFlightSection() throws IOException {
+	public void readSection() throws Exception {
 		ClassLoader classLoader = getClass().getClassLoader();
 		File file = new File(classLoader.getResource("res/input.txt").getFile());
 

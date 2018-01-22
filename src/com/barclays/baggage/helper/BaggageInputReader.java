@@ -14,7 +14,7 @@ import com.barclays.baggage.model.Bag;
  * Created on Jan 21, 2018tim2:04:00 AM by @author rboddu
  *
  */
-public class BaggageInputReader {
+public class BaggageInputReader implements InputReader {
 	
 	private Map<String, Bag> bagIdToBagMap;
 	public Map<String, Bag> getBagIdToBagMap() {
@@ -23,7 +23,7 @@ public class BaggageInputReader {
 	public void setBagIdToBagMap(Map<String, Bag> bagIdToBagMap) {
 		this.bagIdToBagMap = bagIdToBagMap;
 	}
-	public void readBagSection() throws IOException{
+	public void readSection() throws Exception{
 	    ClassLoader classLoader = getClass().getClassLoader();
 	    File file = new File(classLoader.getResource("res/input.txt").getFile());
 	

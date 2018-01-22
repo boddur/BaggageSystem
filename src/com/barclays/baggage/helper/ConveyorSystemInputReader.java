@@ -15,11 +15,11 @@ import com.barclays.baggage.service.ConveyorUtil;
  * Created on Jan 21, 2018tim6:53:32 PM by @author rboddu
  *
  */
-public class ConveyorSystemInputReader {
+public class ConveyorSystemInputReader implements InputReader {
 
 	private ConveyorGraph conveyorGraph;
 
-	public void readConveyorSystem() throws Exception {
+	public void readSection() throws Exception {
 		ClassLoader classLoader = getClass().getClassLoader();
 		File file = new File(classLoader.getResource("res/input.txt").getFile());
 
