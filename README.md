@@ -1,4 +1,4 @@
-# Baggage System
+# Baggage Routing System using Dijkstra's algorithm
 Denver International Airport has decided to give an automated baggage system another shot. The hardware and tracking systems from the previous attempt are still in place, they just need a system to route the baggage.  The system will route baggage checked, connecting, and terminating in Denver.
 
 You have been asked to implement a system that will route bags to their flights or the proper baggage claim.  The input describes the airport conveyor system, the departing flights, and the bags to be routed.  The output is the optimal routing to get bags to their destinations.  Bags with a flight id of “ARRIVAL” are terminating in Denver are routed to Baggage Claim.
@@ -60,14 +60,18 @@ Example Output:
 0003 A2 A1 : 1
 0004 A8 A9 A10 A5 : 6
 0005 A7 A8 A9 A10 A5 BaggageClaim : 12
+```
 
 # Solution
+```
 The solution involves modelling the problem as Graph with Each Gate as node and the routes as edges with the weights being travel times and finding the shortest Path between the Source and Destination nodes using Dijkstra's algorithm.
 
 https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
-
-# Execution
-The project is created using Eclipse IDE and can be executed as Java project.
+```
+# App Execution
+```
+The project is created using Eclipse IDE and can be executed as Java Application.
+The main method is present in the class BaggageAppManager and can be executed with the required input.txt file to generate the output.
 The input file is located in src/res/input.txt and can be modified for different inputs.
 The output file is generated in bin/res/output.txt and also displayed on console.
-The main method is present in the class BaggageAppManager and can be executed with the required input.txt file to generate the output.
+
